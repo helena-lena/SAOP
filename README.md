@@ -2,4 +2,5 @@
 Official repository for Surgical Agent Orchestration Platform (SAOP)
 
 ## Video Results
-<video src="https://helena-lena.github.io/SAOP" controls width="800"></video>
+🔗 [Click here to access the videos](https://helena-lena.github.io/SAOP/)
+[![SAOP Demo](https://img.shields.io/badge/SAOP-Demo-blue?style=for-the-badge)](https://helena-lena.github.io/SAOP/)
