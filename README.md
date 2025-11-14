@@ -13,7 +13,7 @@ Official repository for [Surgical Agent Orchestration Platform for Voice-directe
 - tts_outputs: directory containing synthesized .mp3 audio files generated from the command dataset using speech_synthesis.py
 
 ## Codes
-1. Synthesizing .mp3 audio files from the command dataset
+### 1. Synthesizing .mp3 audio files from the command dataset
 - Using the default model (en-US-AriaNeural)
 python speech_synthesis.py
 
@@ -23,7 +23,7 @@ python speech_synthesis.py --model en-US-GuyNeural
 python speech_synthesis.py --model en-US-JennyNeural
 python speech_synthesis.py --model en-US-ChristopherNeural
 
-2. Running SAOP
+### 2. Running SAOP
 Updating...
 
 ## Video Results
