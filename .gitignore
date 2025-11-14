@@ -1,0 +1,15 @@
+# Folders not to upload
+agents/
+edge_voice_interaction/
+modelfiles/
+patient_data/
+utils/
+tts_outputs/
+videos/
+
+# Files not to upload
+config.yaml
+evaluation.ipynb
+saop_realtime_voice.py
+saop_synthesized_audio.py
+speech_synthesis.ipynb

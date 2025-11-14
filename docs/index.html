@@ -7,16 +7,17 @@
   <style>
     body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 24px; }
     .wrap { max-width: 900px; margin: 0 auto; }
-    video { width: 100%; height: auto; background-color: black; min-height: 360px; object-fit: cover; }
-    h1 { margin-bottom: 8px; }
+    video { width: 100%; height: auto; background-color: black; object-fit: contain; }
+    h1 { margin-bottom: 8px; text-align: center; }
     .card { border: 1px solid #ddd; border-radius: 8px; padding: 16px; margin: 16px 0; }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <h1>SAOP — Video Results</h1>
-    <p>Loading may take some time depending on the network conditions.</p>
-    
+    <h1>Surgical Agent Orchestration Platform (SAOP)<br>Video Results</h1>
+    <p>The videos show continuous SAOP results by concatenating 10-second clips, with each clip processing one command.</p>
+    <p>Loading times may vary depending on your network conditions.</p>
+
     <div class="card">
       <h2>All Agents</h2>
       <video controls preload="none" poster="poster_all.jpg" class="video">
@@ -25,25 +26,24 @@
     </div>
 
     <div class="card">
-      <h2>IR Agent</h2>
+      <h2>Information Retrieval (IR) Agent</h2>
       <video controls preload="none" poster="poster_ir.jpg" class="video">
         <source src="https://github.com/helena-lena/SAOP/releases/download/v1.0.0/IR_agent_results.mp4" type="video/mp4">
       </video>
     </div>
 
     <div class="card">
-      <h2>IV Agent</h2>
+      <h2>Image Viewer (IV) Agent</h2>
       <video controls preload="none" poster="poster_iv.jpg" class="video">
         <source src="https://github.com/helena-lena/SAOP/releases/download/v1.0.0/IV_agent_results.mp4" type="video/mp4">
       </video>
     </div>
 
     <div class="card">
-      <h2>AR Agent Results</h2>
+      <h2>Anatomy Rendering (AR) Agent Results</h2>
       <video controls preload="none" poster="poster_ar.jpg" class="video">
-        <!-- 아래 src를 실제 Release asset URL로 교체 -->
         <source src="https://github.com/helena-lena/SAOP/releases/download/v1.0.0/AR_agent_results.mp4" type="video/mp4">
-        브라우저가 HTML5 video를 지원하지 않습니다. <a href="https://objects.githubusercontent.com/<...>/AR_agent_results.mp4">다운로드</a>
+        Your browser does not support HTML5 video. <a href="https://github.com/helena-lena/SAOP/releases/download/v1.0.0/AR_agent_results.mp4">Download</a>
       </video>
     </div>
   </div>
