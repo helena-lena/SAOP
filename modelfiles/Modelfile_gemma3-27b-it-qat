@@ -1,0 +1,13 @@
+FROM gemma3:27b-it-qat
+
+# temperature: 0 ~ 1 (higher is more creative, lower is more coherent)
+PARAMETER temperature 0
+# num_predict: Maximum number of tokens to predict when generating text
+PARAMETER num_predict -1
+# seed: random number seed to use for generation
+PARAMETER seed 42
+
+# set the system message
+SYSTEM """
+You are an operating room assistant, Vinci.
+"""
