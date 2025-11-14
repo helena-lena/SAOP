@@ -19,7 +19,8 @@ Official repository for [Surgical Agent Orchestration Platform for Voice-directe
 python speech_synthesis.py
 ```
 
-- Using a custom TTS model (List of supported models: https://gist.github.com/BettyJJ/17cbaa1de96235a7f5773b8690a20462)
+- Using a custom TTS model 
+  (List of supported models: https://gist.github.com/BettyJJ/17cbaa1de96235a7f5773b8690a20462)
 ```bash
 python speech_synthesis.py --model en-US-AriaNeural
 python speech_synthesis.py --model en-US-GuyNeural
