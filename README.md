@@ -15,13 +15,17 @@ Official repository for [Surgical Agent Orchestration Platform for Voice-directe
 ## Codes
 ### 1. Synthesizing .mp3 audio files from the command dataset
 - Using the default model (en-US-AriaNeural)
+'''
 python speech_synthesis.py
+'''
 
 - Using a custom TTS model (List of supported models: https://gist.github.com/BettyJJ/17cbaa1de96235a7f5773b8690a20462)
+'''
 python speech_synthesis.py --model en-US-AriaNeural
 python speech_synthesis.py --model en-US-GuyNeural
 python speech_synthesis.py --model en-US-JennyNeural
 python speech_synthesis.py --model en-US-ChristopherNeural
+'''
 
 ### 2. Running SAOP
 Updating...
