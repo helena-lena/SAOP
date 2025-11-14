@@ -2,7 +2,7 @@
 Official repository for [Surgical Agent Orchestration Platform for Voice-directed Patient Data Interaction]
 
 ## Datasets
-- SAOP_command_dataset_with_results.xlsx: Excel file of command metadata and associated results
+- SAOP_command_dataset_with_results.xlsx: excel file of command metadata and associated results
   - num: execution order of the command
   - agent: name of agent responsible for the command
   - command: user command
@@ -10,10 +10,21 @@ Official repository for [Surgical Agent Orchestration Platform for Voice-directe
   - type: Explicit or Implicit or Natural Language Question (NLQ)
   - expression: Baseline or Abbreviation or Paraphrase
     
-- tts_outputs: Directory containing synthesized .mp3 audio files generated from the command dataset using speech_synthesis.py
+- tts_outputs: directory containing synthesized .mp3 audio files generated from the command dataset using speech_synthesis.py
 
 ## Codes
-Coming soon!
+1. Synthesizing .mp3 audio files from the command dataset
+- Using the default model (en-US-AriaNeural)
+python speech_synthesis.py
+
+- Using a custom TTS model (List of supported models: https://gist.github.com/BettyJJ/17cbaa1de96235a7f5773b8690a20462)
+python speech_synthesis.py --model en-US-AriaNeural
+python speech_synthesis.py --model en-US-GuyNeural
+python speech_synthesis.py --model en-US-JennyNeural
+python speech_synthesis.py --model en-US-ChristopherNeural
+
+2. Running SAOP
+Updating...
 
 ## Video Results
 👉 [Click here to access the videos](https://helena-lena.github.io/SAOP/)
