@@ -28,7 +28,8 @@ python speech_synthesis.py --model en-US-ChristopherNeural
 ```
 
 ### 2. Running SAOP
-Updating...
+
+Coming soon!
 
 ## Video Results
 👉 [Click here to access the videos](https://helena-lena.github.io/SAOP/)
