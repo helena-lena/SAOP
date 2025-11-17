@@ -28,8 +28,22 @@ python speech_synthesis.py --model en-US-JennyNeural
 python speech_synthesis.py --model en-US-ChristopherNeural
 ```
 
-### 2. Running SAOP
+### 2. Run SAOP
+- Setting virtual environments
+```bash
+pip install -r requirements.txt
+```
 
+- Setting Ollama
+  - Install ollama: https://ollama.com/
+  - Download model: ollama pull gemma3:27b-it-qat
+  - Generate a new model with predefined parameters: ollama create vinci:gemma3-27b-it-qat -f ./modelfiles/Modelfile
+  - Preload the model on GPU: curl http://localhost:11434/api/generate -d '{"model": "vinci:gemma3-27b-it-qat", "keep_alive": -1}'
+
+- Run SAOP
+Coming soon!
+
+### 3. Evaluation
 Coming soon!
 
 ## Video Results
