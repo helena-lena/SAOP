@@ -70,7 +70,7 @@ pip install -r requirements.txt
   curl http://localhost:11434/api/generate -d '{"model": "vinci:gemma3-27b-it-qat", "keep_alive": -1}'
   ```
 
-- Update **config.yaml** file: Fill in configuration file with your server details
+- Update **config.yaml** file: fill in configuration file with your server details
 
 - Running SAOP code **saop_integrated.py**: supports three modes
   - **Real-time mode**: audio interactino from edge laptop
