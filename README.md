@@ -27,7 +27,7 @@ Official repository for [Surgical Agent Orchestration Platform for Voice-directe
     - **full_video**
       - **video_v1.mp4**: sample video
       - **v1_segments**: 10-second video clips
-    - **CT**: axial, coronal, and sagittal folders with DICOM images used by the Image Viewer (IV) agent
+    - **CT**: axial, coronal, and sagittal folders with DICOM files used by the Image Viewer (IV) agent
     - **3D_recon**: 3D anatomical models used by the Anatomy Rendering (AR) agent
       - Generated from the above CT images using 3D Slicer software (https://www.slicer.org/)
       - **lungs.nii.gz**: Segmentation - Total Segmentator - Segmentation task (total) - Apply - Export visible segments (only superior lobe of left lung, inferior lobe of left lung, superior lobe of right lung, middle lobe of right lung, inferior lobe of right lung) to binary label map as NifTI (.nii.gz.) file
