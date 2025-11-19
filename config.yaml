@@ -1,0 +1,50 @@
+# SAOP Configuration File
+
+# HuggingFace Token
+hf_token: "YOUR_HUGGINGFACE_TOKEN_HERE"
+
+# Ollama Model
+ollama_model: "vinci:gemma3-27b-it-qat"                                                    # change to your "ollama_model_name"
+
+# Remote Audio Recording Configuration
+remote_audio:
+  edge_user: "your_edge_device_username"                                                   # check by "id -un"
+  edge_ip: "your_edge_device_address"                                                      # check by "ipconfig" (Windows), "hostname -I" (Linux)
+  edge_remote_path: "C:/Users/user/anaconda_home/edge_voice_interaction/"                  # change to your global path of edge_voice_interaction folder 
+  edge_py_filename: "real_time_speech.py"
+  edge_conda_env: "saop"                                                                   # change to your conda environment name
+  server_remote_path: "/home/guro/anaconda_home/Surgical_Agent_Orchestration_Platform/"    # change to your path of Surgical_Agent_Orchestration_Platform folder
+  server_remote_user: "your_server_username"                                               # check by "id -un"
+  server_remote_ip: "your_server_ip_address"                                               # check by "ipconfig" (Windows), "hostname -I" (Linux)
+  server_remote_port: "your_port_if_required"                                              # if required
+
+# Patient and Data Configuration
+patient:
+  pt_id: 1                                                    # patient id
+  data_path: "./datasets/patient_data/P1"                     # patient data path
+  video_path: "full_video/v1_segments/v1_0.mp4"              # target video
+  pt_input_path: "./datasets/patient_data/clinical_info.xlsx" # excel file with the clinical information of the patient
+  sheet_name: "Sample"                                        # sheet name of the excel file
+
+# STT Model Configuration
+stt:
+  model_id: "medium"                                          # whisper models: tiny, base, small, medium, large
+  device: "cuda"                                              # cuda or cpu
+  compute_type: "float16"                                     # float16 (GPU) or int8 (CPU)
+
+# Audio Configuration
+audio:
+  # Audio mode: "realtime", "synthesized", or "text"
+  audio_mode: "realtime"
+  # - realtime: Record audio from edge laptop in real-time
+  # - synthesized: Use pre-recorded audio files
+  # - text: Direct text command input (no audio/STT)
+  
+  # Synthesized audio file path or folder path (used in synthesized mode)
+  audio_path: null                                            # "./datasets/tts_outputs/en-US-AriaNeural"
+  start: null                                                 # Starting audio file index (e.g., 1 for 1.mp3; if None, all files are used)
+  end: null                                                   # Ending audio file index (e.g., 10 for 10.mp3; if None, all files are used)
+  
+  # Text command mode
+  text_command: null                                          # "Show patient information"
+  text_commands_file: null                                    # "./datasets/text_commands.txt" Text commands file path

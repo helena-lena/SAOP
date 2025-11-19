@@ -17,7 +17,7 @@ Usage:
 Description:
     This script reads commands from an Excel file and generates TTS audio files for each command. 
     If a command is not given, it creates a 4-second silent audio file.
-""" 
+"""
 
 import pandas as pd
 import edge_tts

@@ -1,0 +1,39 @@
+Show patient information.
+Display the PFT info.
+None.
+How old is the patient?
+Reset
+Remove all.
+Bring up the CT slices.
+Coronal plus 250.
+Move back back.
+Axial plus 20.
+Slide to the inferior.
+Coronal zoom in
+None
+Move sagittal to the middle slice.
+Move left left left.
+Zoom out.
+Reset.
+Remove all.
+Load 3D anatomical structures.
+Zoom in to trachea.
+Get closer to lung nodules.
+Rotate to the left.
+Right rotation.
+Rotate up.
+Rotate to the bottom.
+None
+Zoom out.
+Zoom out.
+Show anterior view.
+Horizontal rotation.
+Add right lung.
+Remove RUL.
+Add all structures.
+Reset
+View from the back.
+Can you see from the right side?
+Inferior view.
+Surgical view.
+Erase all of them.
