@@ -5,27 +5,30 @@ Official repository for [Surgical Agent Orchestration Platform for Voice-directe
 👉 [Click here to access the videos](https://helena-lena.github.io/SAOP/)
 
 ## Datasets
-- SAOP_command_dataset_with_results.xlsx: excel file of command metadata and associated results
+- SAOP_command_dataset_with_results.xlsx: excel file containing command metadata and real-time voice results
   - num: execution order of the command
-  - agent: name of agent responsible for the command
+  - agent: name of the agent responsible for the command
   - command: user command
   - structure: Single or Composite
   - type: Explicit or Implicit or Natural Language Question (NLQ)
   - expression: Baseline or Abbreviation or Paraphrase
-    
-- tts_outputs: directory containing synthesized .mp3 audio files generated from the command dataset using speech_synthesis.py
 
-- patient_data: fake data for reference
-  - clinical_info.xlsx: patient clinical information for Information Retrieval (IR) Agent
+- tts_outputs: directory containing mp3 audio command files generated using speech_synthesis.py
+
+- SAOP_synthesized_audio_dataset_with_results.xlsx: excel file containing results for the synthesized mp3 audio files (tts_outputs)
+
+- patient_data: A set of fake patient data for reference
+  - clinical_info.xlsx: patient clinical information used by Information Retrieval (IR) Agent
   - P1 (patient ID)
     - full_video
       - video_v1.mp4: sample video
-      - v1_segments: sample video clips of 10 seconds
-    - CT: fake example of axial, coronal, sagittal slices
-    - 3D_recon: generate nifti files from above CT images
-      - lungs.nii.gz
-      - lung_nodules.nii.gz
-      - trachea_bronchia.nii.gz
+      - v1_segments: 10-second video clips
+    - CT: axial, coronal, and sagittal folders with DICOM images used by the Image Viewer (IV) agent
+    - 3D_recon: 3D anatomical models used by the Anatomy Rendering (AR) agent
+      - Generated from the above CT images using 3D Slicer software (https://www.slicer.org/)
+      - lungs.nii.gz: Segmentation - Total Segmentator - Segmentation task (total) - Apply - Save only 
+      - lung_nodules.nii.gz: Segmentation - Total Segmentator - Segmentation task (lung: nodules) - Apply - Save
+      - trachea_bronchia.nii.gz: Segmentation - Total Segmentator - Segmentation task (lung: vessels) - Apply - Save only
 
 ## Codes
 ### 1. Synthesizing .mp3 audio files from the command dataset
@@ -52,13 +55,44 @@ pip install -r requirements.txt
 ```
 
 - Setting Ollama
-  - Install ollama: https://ollama.com/
-  - Download model: ollama pull gemma3:27b-it-qat
-  - Generate a new model with predefined parameters: ollama create vinci:gemma3-27b-it-qat -f ./modelfiles/Modelfile
-  - Preload the model on GPU: curl http://localhost:11434/api/generate -d '{"model": "vinci:gemma3-27b-it-qat", "keep_alive": -1}'
+  - Install Ollama (https://ollama.com/)
+  - Download model
+  ```bash
+  ollama pull gemma3:27b-it-qat
+  ```
+  - Generate a custom model with predefined parameters
+   ```bash
+   ollama create vinci:gemma3-27b-it-qat -f ./modelfiles/Modelfile
+   ```
+  - Preload the model on GPU: 
+   ```bash
+   curl http://localhost:11434/api/generate -d '{"model": "vinci:gemma3-27b-it-qat", "keep_alive": -1}'
+   ```
+   
+- Running SAOP: supports three modes (Real-time audio interaction from edge laptop, Synthesized audio files, Text input)
+  - Real-time mode
+  ```bash
+  # default
+  xvfb-run -s "-screen 0 800x600x24" python saop_integrated.py config.yaml
+  xvfb-run -s "-screen 0 800x600x24" python saop_integrated.py config.yaml --mode realtime
+  ```
+  - Synthesized audio mode
+  ```bash
+  # single file
+  xvfb-run -s "-screen 0 800x600x24" python saop_integrated.py config.yaml --mode synthesized --audio_path ./datasets/tts_outputs/en-US-AriaNeural/1.mp3
+  # folder
+  xvfb-run -s "-screen 0 800x600x24" python saop_integrated.py config.yaml --mode synthesized --audio_path ./datasets/tts_outputs/en-US-AriaNeural
+  # folder with range
+  xvfb-run -s "-screen 0 800x600x24" python saop_integrated.py config.yaml --mode synthesized --audio_path ./datasets/tts_outputs/en-US-AriaNeural -s 10 -e 20
+  ```
+  - Text mode
+  ```bash
+  # single command
+  xvfb-run -s "-screen 0 800x600x24" python saop_integrated.py config.yaml --mode text --text_command "Show patient information"
+  # text file with multiple commands
+  xvfb-run -s "-screen 0 800x600x24" python saop_integrated.py config.yaml --mode text --text_commands_file ./datasets/text_commands.txt
+  ```
 
-- Run SAOP
-Coming soon!
 
 ### 3. Evaluation
 Coming soon!
