@@ -30,9 +30,9 @@ Official repository for [Surgical Agent Orchestration Platform for Voice-directe
     - **CT**: axial, coronal, and sagittal folders with DICOM images used by the Image Viewer (IV) agent
     - **3D_recon**: 3D anatomical models used by the Anatomy Rendering (AR) agent
       - Generated from the above CT images using 3D Slicer software (https://www.slicer.org/)
-      - **lungs.nii.gz**: Segmentation - Total Segmentator - Segmentation task (total) - Apply - Save only 
-      - **lung_nodules.nii.gz**: Segmentation - Total Segmentator - Segmentation task (lung: nodules) - Apply - Save
-      - **trachea_bronchia.nii.gz**: Segmentation - Total Segmentator - Segmentation task (lung: vessels) - Apply - Save only
+      - **lungs.nii.gz**: Segmentation - Total Segmentator - Segmentation task (total) - Apply - Export visible segments () to binary label map as NifTI (.nii.gz.) file
+      - **lung_nodules.nii.gz**: Segmentation - Total Segmentator - Segmentation task (lung: nodules) - Apply - Export visible segments () to binary label map as NifTI (.nii.gz.) file
+      - **trachea_bronchia.nii.gz**: Segmentation - Total Segmentator - Segmentation task (lung: vessels) - Apply - Export visible segments (trachea and bronchus) to binary label map as NifTI (.nii.gz.) file
 
 ## Codes
 ### 1. Synthesizing .mp3 audio files from the command dataset
