@@ -102,7 +102,7 @@ pip install -r requirements.txt
 ### 4. Citation
 If you find this repository useful, please consider citing this paper:
 
-```bash
+```bibtex
 @article{park2025saop,
   title={Surgical Agent Orchestration Platform for Voice-directed Patient Data Interaction},
   author={Park, Hyeryun and Gu, Byung Mo and Lee, Jun Hee and Choi, Byeong Hyeon and Kim, Sekeun and Kim, Hyun Koo and Kim, Kyungsang},
