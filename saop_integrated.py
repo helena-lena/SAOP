@@ -6,7 +6,7 @@ Supports three modes:
 - Synthesized audio files
 - Text input
 
-USAGE:co
+USAGE:
     # Real-time mode
     xvfb-run -s "-screen 0 800x600x24" python saop_integrated.py config.yaml
     xvfb-run -s "-screen 0 800x600x24" python saop_integrated.py config.yaml --mode realtime
