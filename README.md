@@ -19,7 +19,7 @@ Official repository for [Surgical Agent Orchestration Platform for Voice-directe
 
 - **tts_outputs**: directory containing mp3 audio command files generated using speech_synthesis.py
 
-- **SAOP_synthesized_audio_dataset_with_results.xlsx**: excel file containing results for the synthesized mp3 audio files (tts_outputs)
+- **SAOP_synthesized_audio_dataset_with_results.xlsx**: excel file containing results for the synthesized audio files
 
 - **patient_data**: A set of fake patient data for reference
   - **clinical_info.xlsx**: patient clinical information used by Information Retrieval (IR) Agent
