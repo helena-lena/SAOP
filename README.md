@@ -1,5 +1,8 @@
 # Surgical Agent Orchestration Platform (SAOP)
-Official repository for [Surgical Agent Orchestration Platform for Voice-directed Patient Data Interaction]
+Official repository for [Surgical Agent Orchestration Platform for Voice-directed Patient Data Interaction](https://arxiv.org/abs/2511.07392)
+
+## Video Results
+👉 [Click here to access the videos](https://helena-lena.github.io/SAOP/)
 
 ## Datasets
 - SAOP_command_dataset_with_results.xlsx: excel file of command metadata and associated results
@@ -11,6 +14,18 @@ Official repository for [Surgical Agent Orchestration Platform for Voice-directe
   - expression: Baseline or Abbreviation or Paraphrase
     
 - tts_outputs: directory containing synthesized .mp3 audio files generated from the command dataset using speech_synthesis.py
+
+- patient_data: fake data for reference
+  - clinical_info.xlsx: patient clinical information for Information Retrieval (IR) Agent
+  - P1 (patient ID)
+    - full_video
+      - video_v1.mp4: sample video
+      - v1_segments: sample video clips of 10 seconds
+    - CT: fake example of axial, coronal, sagittal slices
+    - 3D_recon: generate nifti files from above CT images
+      - lungs.nii.gz
+      - lung_nodules.nii.gz
+      - trachea_bronchia.nii.gz
 
 ## Codes
 ### 1. Synthesizing .mp3 audio files from the command dataset
@@ -31,6 +46,8 @@ python speech_synthesis.py --model en-US-ChristopherNeural
 ### 2. Run SAOP
 - Setting virtual environments
 ```bash
+conda create -n saop python=3.12
+conda activate saop
 pip install -r requirements.txt
 ```
 
@@ -45,6 +62,3 @@ Coming soon!
 
 ### 3. Evaluation
 Coming soon!
-
-## Video Results
-👉 [Click here to access the videos](https://helena-lena.github.io/SAOP/)
