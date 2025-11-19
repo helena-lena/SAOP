@@ -99,4 +99,13 @@ pip install -r requirements.txt
 ### 3. Evaluation
 - Execute **evaluation.ipynb** to check Multi-level Orchestration Evaluation Metric (MOEM)
 
+### 4. Citation
+If you find this repository useful, please consider citing this paper:
+
+@article{park2025saop,
+  title={Surgical Agent Orchestration Platform for Voice-directed Patient Data Interaction},
+  author={Park, Hyeryun and Gu, Byung Mo and Lee, Jun Hee and Choi, Byeong Hyeon and Kim, Sekeun and Kim, Hyun Koo and Kim, Kyungsang},
+  journal={arXiv preprint arXiv:2511.07392},
+  year={2025}
+}
 
