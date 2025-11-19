@@ -97,4 +97,6 @@ pip install -r requirements.txt
   ```
 
 ### 3. Evaluation
-- Execute **evaluation.ipynb**
+- Execute **evaluation.ipynb** to check Multi-level Orchestration Evaluation Metric (MOEM)
+
+### Done! ###
