@@ -31,8 +31,8 @@ Official repository for [Surgical Agent Orchestration Platform for Voice-directe
     - **3D_recon**: 3D anatomical models used by the Anatomy Rendering (AR) agent
       - Generated from the above CT images using 3D Slicer software (https://www.slicer.org/)
       - **lungs.nii.gz**: Segmentation - Total Segmentator - Segmentation task (total) - Apply - Export visible segments () to binary label map as NifTI (.nii.gz.) file
-      - **lung_nodules.nii.gz**: Segmentation - Total Segmentator - Segmentation task (lung: nodules) - Apply - Export visible segments () to binary label map as NifTI (.nii.gz.) file
-      - **trachea_bronchia.nii.gz**: Segmentation - Total Segmentator - Segmentation task (lung: vessels) - Apply - Export visible segments (trachea and bronchus) to binary label map as NifTI (.nii.gz.) file
+      - **lung_nodules.nii.gz**: Segmentation - Total Segmentator - Segmentation task (lung: nodules) - Apply - Export visible segments (only lung_nodules) to binary label map as NifTI (.nii.gz.) file
+      - **trachea_bronchia.nii.gz**: Segmentation - Total Segmentator - Segmentation task (lung: vessels) - Apply - Export visible segments (only trachea and bronchus) to binary label map as NifTI (.nii.gz.) file
 
 ## Codes
 ### 1. Synthesizing .mp3 audio files from the command dataset
@@ -102,10 +102,12 @@ pip install -r requirements.txt
 ### 4. Citation
 If you find this repository useful, please consider citing this paper:
 
+```bash
 @article{park2025saop,
   title={Surgical Agent Orchestration Platform for Voice-directed Patient Data Interaction},
   author={Park, Hyeryun and Gu, Byung Mo and Lee, Jun Hee and Choi, Byeong Hyeon and Kim, Sekeun and Kim, Hyun Koo and Kim, Kyungsang},
   journal={arXiv preprint arXiv:2511.07392},
   year={2025}
 }
+```
 
