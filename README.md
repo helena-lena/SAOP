@@ -1,6 +1,9 @@
 # Surgical Agent Orchestration Platform (SAOP)
 Official repository for [Surgical Agent Orchestration Platform for Voice-directed Patient Data Interaction](https://arxiv.org/abs/2511.07392)
-![SAOP Workflow](https://raw.githubusercontent.com/helena-lena/SAOP/main/docs/SAOP_workflow.png)
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/helena-lena/SAOP/main/docs/SAOP_workflow.png" width="70%">
+</p>
 
 ## Video Results
 👉 [Click here to access the videos](https://helena-lena.github.io/SAOP/)
