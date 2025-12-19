@@ -104,7 +104,7 @@ If you find this repository useful, please consider citing this paper:
 
 ```bibtex
 @article{park2025saop,
-  title={Surgical Agent Orchestration Platform for Voice-directed Patient Data Interaction},
+  title={Voice-Interactive Surgical Agent for Multimodal Patient Data Control},
   author={Park, Hyeryun and Gu, Byung Mo and Lee, Jun Hee and Choi, Byeong Hyeon and Kim, Sekeun and Kim, Hyun Koo and Kim, Kyungsang},
   journal={arXiv preprint arXiv:2511.07392},
   year={2025}
