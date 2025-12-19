@@ -9,7 +9,7 @@ Official repository for [Voice-Interactive Surgical Agent for Multimodal Patient
 👉 [Click here to access the videos](https://helena-lena.github.io/SAOP/)
 
 ## Datasets
-- **SAOP_command_dataset_with_results.xlsx**: excel file containing command metadata and real-time voice results
+- **command_dataset_with_results.xlsx**: excel file containing command metadata and real-time voice results
   - num: execution order of the command
   - agent: name of the agent responsible for the command
   - command: user command
@@ -19,7 +19,7 @@ Official repository for [Voice-Interactive Surgical Agent for Multimodal Patient
 
 - **tts_outputs**: directory containing mp3 audio command files generated using speech_synthesis.py
 
-- **SAOP_synthesized_audio_dataset_with_results.xlsx**: excel file containing results for the synthesized audio files
+- **synthesized_audio_dataset_with_results.xlsx**: excel file containing results for the synthesized audio files
 
 - **patient_data**: A set of fake patient data for reference
   - **clinical_info.xlsx**: patient clinical information used by Information Retrieval (IR) Agent
@@ -50,7 +50,7 @@ python speech_synthesis.py --model en-US-JennyNeural
 python speech_synthesis.py --model en-US-ChristopherNeural
 ```
 
-### 2. Run SAOP
+### 2. Run Voice-Interactive Surgical Agent (VISA)
 - Setting virtual environments
 ```bash
 conda create -n saop python=3.12
